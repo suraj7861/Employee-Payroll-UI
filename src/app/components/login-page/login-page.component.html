@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h2>Login Form</h2>
+
+    <form (ngSubmit)="onsubmit()" >
+
+        <div class="container">
+            <label for="email"><b>Email - Id</b></label><br>
+            <input type="text" [(ngModel)]="credentials.emailId" placeholder="Enter Email-Id" name="email" required><br>
+
+            <label for="psw"><b>Password</b></label><br>
+            <input type="password" [(ngModel)]="credentials.password"placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+        </div>
+
+        <!-- <div class="container2" style="background-color:#eed4d4">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div> -->
+    </form>
+
+</body>
+
+</html>
+
+
+
+<!-- <div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <form>
+        <mat-form-field>
+            <input matInput placeholder="Email-Id">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="password" placeholder="Password">
+        </mat-form-field>
+        </form>
+    </mat-card>
+</div> -->

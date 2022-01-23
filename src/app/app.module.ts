@@ -12,13 +12,19 @@ import { MatInputModule } from '@angular/material/input';
 import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HomeComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

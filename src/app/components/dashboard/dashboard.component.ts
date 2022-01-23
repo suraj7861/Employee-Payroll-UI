@@ -33,18 +33,18 @@ export class DashboardComponent implements OnInit {
 
 
   onsubmit() {
-    var userData: any
-    userData = localStorage.getItem('empdata');
-    if (userData == null) {
-      userData = []
-      userData.push(JSON.stringify(this.employeeForm.value))
+    var obj = JSON.stringify(this.employeeForm.value);
+
+    var array : any;
+    let obj1 = localStorage.getItem('empdata');
+    if(obj1 != null){
+      array = JSON.parse(obj1)
     }
-    else {
-      JSON.parse(userData)
-      console.log(userData)
-      userData.push(JSON.stringify(this.employeeForm.value))
-    }  
-    localStorage.setItem('empdata', userData)
+    else{
+      array = [];
+    }
+    array.push(obj);
+    localStorage.setItem('empdata',JSON.stringify(array))
   }
   departmentList: Array<any> = [
     {
